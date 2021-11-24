@@ -12,6 +12,7 @@ class ProductController extends BaseController
         $products = $this->productionModel->getAll(["id", "name", "decription"], ["id" => "desc"]);
         $this->view('frontend.products.index', [
             "products" => $products,
+            "titlePage" => "Product"
         ]);
     }
 }
